@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+     initial-scale=1.0">
+    <title>Exercício: Conhecendo Javascript</title>
+</head>
+<body>
+    <label id="alunoIdentif">Aluno não identificado</label>
+    <button onclick="boasVindas()">Boas Vindas!!!</button>
+    <button onclick="identificacao()">Identifique-se</button>
+    <script>
+
+        //alert("Olá Vitor!"); - Mostra na tela logo de início, o que você escreveu dentro dele.
+
+        function boasVindas() {
+            alert('Seja bem-vindo ao Javascript, 1H3!');
+        }
+
+        function identificacao() {
+            let alunoIdentif = document.getElementById('alunoIdentif');
+            let nome = prompt('Quem é você? ');
+            //alert('Olá ' + nome + ', é um prazer ter você na aula!');
+            if(nome == null) {
+                alunoIdentif.innerText = 'Que pena, você não se identificou';
+                //alert('Que pena, você não se identificou!');
+            } else if (nome == ''){
+                alunoIdentif.innerText = 'Favor informar um nome!';
+               //alert('Favor informar um nome! ');   
+            } else {
+                alunoIdentif.innerText = `Olá, ${nome}! É um prazer ter você na aula!`;
+                //alert(`Olá, ${nome}! é um prazer ter você na aula!`);   
+            }
+            
+        }
+
+        //boasVindas(); - mostra a função criada, porém de forma "crua".
+
+    </script>
+</body>
+</html>
